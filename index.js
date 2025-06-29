@@ -1,10 +1,5 @@
-// index.js - Core of FreePajda
-import { loadMemory, splitMemory, writeFragments } from './lib/logic.js'
+import { splitArchiveIntoFragments } from './lib/logic.js';
 
-async function main() {
-  const raw = await loadMemory();
-  const parts = splitMemory(raw);
-  await writeFragments(parts);
-}
-
-main();
+console.log('✨ FreePajda is restructuring memory...');
+splitArchiveIntoFragments();
+console.log('✅ Done.');
